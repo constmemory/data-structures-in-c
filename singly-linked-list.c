@@ -291,9 +291,9 @@ void freeList(node *head){
 }
 
 // Helper function to handle input buffer clearing
-void clearInputBuffer() {
+void clearInputBuffer(){
     int c;
-    while ((c = getchar()) != '\n' && c != EOF);
+    while((c = getchar()) != '\n' && c != EOF);
 }
 
 int main(){
@@ -391,7 +391,7 @@ int main(){
                     continue;
                 }
                 position = searchNode(head, value);
-                if (position != -1)
+                if(position != -1)
                     printf("Value found at position : %d\n", position);
                 else 
                     printf("Value not found.\n");
@@ -408,7 +408,7 @@ int main(){
                 break;
 
             case 10:
-                if(isEmpty(head)) {
+                if(isEmpty(head)){
                     printf("List is empty.\n");
                 } else{
                     printf("Middle Element : %d\n", findMiddle(head));
@@ -442,4 +442,5 @@ int main(){
     }
 
     return 0;
+
 }
